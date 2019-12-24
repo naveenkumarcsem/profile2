@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon"type="image/ico"href="nk.png">
+    <title>NAVEENKUMAR MOORTHY</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://kit.fontawesome.com/b3b866c135.js" crossorigin="anonymous"></script>
+    <style type="text/css">
+    *,
+    *::before,
+    *::after{
+        margin: 0;
+        padding:0;
+                box-sizing: border-box;
+    }
+    *:focus{
+        outline:none;
+    }
+    body{
+        padding:0;
+        margin:0;
+        background:#000;
+        color:white;
+        font-family:"oxygen",sans-serif;
+        overflow-x: hidden;
+    }
+    a{
+        text-decoration: none;
+    }
+    img{
+        width:100%;
+    }
+    .home img{
+        width:100%;
+        -webkit-filter:grayscale(100%)
+        contrast(100%);
+        filter:grayscale(100%) contrast(200%)
+        brightness(70%);
+    }
+    .folio img{
+        filter:grayscale(100%);
+    }
+    aside{
+        
+        position:fixed;
+        background: #424242;
+        top:0px;
+        left:0px;
+        width:120px;
+        height:100%;
+        overflow: none;
+        z-index: 1;
+        text-align: center;
+        padding:0;
+     
+    }
+    aside img{
+        filter:grayscale(00%) contrast(60%)
+        brightness(100%);
+        margin-bottom:-3px;
+    
+    }
+    .material-icons.md-36{
+        font-size:36px;
+    }
+    aside a{
+        display:block;
+        padding:15px 0;
+        color:white;
+        transition: all 0.35s;
+        text-transform:uppercase;
+        font-size: 0.75em;
+        letter-spacing: 2px;
+        margin-top: 80px;
+ 
+    }
+    aside p{
+        margin:0;
+        padding:0;
+    }
+    aside a:hover{
+        background:#fff;
+        color: black;
+
+    }
+    aside nav a:nth-child(2){
+        background:#fff;
+        color: black;
+        
+    }
+    aside nav a:nth-child(2):hover{
+        background:#fff;
+        color:#000;
+    }
+   main{
+       max-width: 980px;
+       background:#000;
+       margin-left:20%;
+       padding:12px 50px 12px 50px;
+   }
+   header{
+       text-align: center;
+       letter-spacing: 2px;
+   }
+   header h1{
+       font-weight:bold;
+       font-size: 4em;
+       letter-spacing: 4px;
+   }
+   header h5{
+       font-weight: 300;
+       font-size: 1em;
+       letter-spacing: 4px;
+       color:#b2b2b2; 
+   }
+   .about{
+       margin-left:10%;
+   }
+   .about,
+   .folio,
+   .contact{
+       line-height: 1.5em;
+       letter-spacing: 1px;
+       font-weight:300;
+       margin-left:10%;
+   }
+   .about h2,
+   .folio h2,
+   .contact h2{
+       font-weight: 300;
+       text-transform: uppercase;
+     
+       padding-bottom: 10px;
+       margin:80px 0 0 0;
+       letter-spacing: 4px;
+   }
+   .about p{
+       color:#b2b2b2;
+   }
+   .about .para{
+       margin: 50px;
+       padding: 80px;
+       text-align: center;
+   }
+   .about span{
+       font-weight: 600;
+       color:white;
+   }
+   .about h3{
+       font-weight:300;
+       margin:50px 0;
+   }
+   .container{
+       width:80%;
+       background-color: #b2b2b2;
+   }
+   .skills {
+       text-align: right;
+       padding-right:20px;
+       line-height:30px;
+       color:white;
+       background-color: #424242;
+   }
+  
+       .html
+       {
+           width:95%;
+       }
+       .css
+       {
+           width:85%;
+       }
+       .js
+       {
+           width:65%;
+       }
+       .php{
+           width:60%;
+       }
+       .folio h2{
+           color:white;
+           font-weight:300;
+           letter-spacing: 2px;
+       }
+       .folio p{
+           font-size: 0.75em;
+       }
+       .row-halves{
+           display:-webkit-box;
+           display: -ms-flexbox;
+           display: flex;
+           justify-content: space-between;
+           margin:10px 0;
+           -webkit-flex-pack:justify;
+
+       }
+       .row-halves.col{
+           width:39%;
+       }
+       .col{
+           border:1px solid #222;
+           background:#222;
+           color:#b2b2b2;
+           padding:10px;
+       }
+      
+       label{
+           color:#b2b2b2;
+       }
+       form input[type="text"],
+       select,
+       textarea{
+           width:100%;
+           padding:12px;
+           border: none;
+           border:1px solid #222;
+           background: transparent;
+           margin-top:6px;
+           margin-bottom: 16px;
+           resize:vertical;
+           color:#b2b2b2;
+
+       }
+       form input[type="text"]:focus,
+       textarea:focus{
+           outline: none;
+           border:1px solid #009688;
+       }
+        input[type="submit"]{
+           background-color: transparent;
+           color: #b2b2b2;
+           text-transform: uppercase;
+           padding:12px 20px;
+           border:1px solid #222;
+           cursor:pointer;
+           transition: all 0.35s;
+       }
+       input[type="submit"]{
+           background-color: transparent;
+           color: #b2b2b2;
+           text-transform: uppercase;
+           padding:12px 20px;
+           border:1px solid #222;
+           cursor:pointer;
+           transition: all 0.35s;
+       }
+       input[type="submit"]:hover{
+           background-color: #b2b2b2;
+           color:#222;
+       }
+       .contact .container{
+           margin-top:20px;
+           margin-bottom:80px;
+           background: transparent;
+           padding:20px 0;
+       }
+       .footer{
+           border-top:1px solid #222;
+       } 
+       .top-bar{
+           padding: 20px 0;
+           text-align: center;
+       }
+       .top-bar a{
+           margin:10px;
+           font-size:2em;
+           color:#b2b2b2;
+           transition:all 0.35;
+           display: inline-block;
+
+       }
+       .top-bar a:hover{
+           transform: scale(1.1);
+           color:#855f35;
+
+       }
+       .bottom-bar{
+           background:#000;
+           font-size:0.75em;
+           text-align: center;
+       }
+       @media(max-width:1000px){
+           .row-halves{
+               display:block;
+
+           }
+           .row-halves.col{
+               width:100%;
+               margin:0 0 10px 0;
+           }
+       }
+       @media(max-width:801px){
+           aside{
+               display:none;
+           
+
+           }
+           main{
+               width:100%;
+               margin:0 auto;
+               padding:12px 25px;
+           }
+           .about .para{
+               margin: 30px;
+               padding: 20px;
+           }           
+
+       }
+       header{
+           margin-top:80px; 
+       }
+       header h1{
+           font-size: 3em;
+           line-height:1.4em;
+       }
+       header h5{
+           font-size: 1em;
+           letter-spacing:2px;
+       }
+       .mobile-nav{
+           position:fixed;
+           width:100%;
+           display:flex;
+           justify-content: space-around;
+           background-color: rgba(0,0,0,0.8);
+           z-index: 1;
+           text-decoration: none;
+       }
+       .mobile-nav a{
+           width:100%;
+           color:#b2b2b2;
+           text-transform:uppercase;
+           font-size:0.875em;
+           letter-spacing: 2px;
+           text-align: center;
+           padding:10px 10px;
+           transition: all 0.35s;
+           text-decoration: none;
+       }
+       .mobile-nav a:hover{
+           background:#b2b2b2;
+           color:#222;
+       }
+      
+       .fa-bars{
+           margin-left: 20px;
+           margin-top: 20px;
+           visibility: hidden;
+           text-decoration: none;
+           position: fixed;
+       }
+       @media(max-width: 728px){
+           .mobile-nav{
+               display: flex;
+               flex-direction: row;
+               color: white;
+           }
+           .fa-bars{
+               visibility: visible;
+               margin-left: 20px;
+           margin-top: 20px;
+         
+           text-decoration: none;
+           }
+           .home h1{
+               font-size: 20px;
+           }
+           .top-bar{
+               font-size: 10px;
+           }
+           
+       }
+       @media(min-width: 769px){
+           .mobile-nav{
+               visibility: hidden;
+           }
+       }
+       .skill{
+            margin-left: 80px;
+       }
+       .mmm h2{
+           box-shadow:#009688;
+           
+       }
+       .mmm h2:hover{
+           
+           color: rgb(160, 95, 125);
+           transform: scale(1.1);
+       }
+       .mmm h1:hover{
+           
+           color: rgb(95, 147, 160);
+           transform: scale(1.1);
+       }
+       .folio img{
+           position: relative;
+           left:9px;
+       }
+       .folio h3{
+        position: relative;
+           left:10px;
+       }
+       
+       
+    
+    
+
+</style>
+
+</head>
+<body>
+    <!-- <script>
+        $(document).ready(function(){
+            $(".mobile-nav a").hide();
+            $(".fa-bars").click(function(){
+                $(".mobile-nav a").toggle();
+            });
+        });
+    </script> -->
+    
+    <aside>
+        <nav>
+          
+            <img src="n5.jpg" alt="">
+          <a href="#home"><i class="material-icons md-36">home</i><p>home</p></a>
+          <a href="#about"><i class="material-icons md-36">person</i><p>about</p></a>
+          <a href="#folio"><i class="material-icons md-36">image</i><p>Folio</p></a>
+          <a href="#contact"><i class="material-icons md-36">mail</i><p>contact</p></a>
+        </div>    
+            </nav>
+        
+    </aside>
+    <nav class="mobile-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#folio">Folio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <main>
+        <header class="home" id="home"><br><br>
+            <h1>i'm M.Naveenkumar</h1>
+            <h5>Designer // Developer</h5>
+            <img src="naveen.jpg" alt="">
+        </header>
+    </main>
+    <section class="about" id="about">
+        <h2 style="text-align:center;">About me</h2>
+        <div class="para">
+        <p>
+            <span>Hello, I'm Naveen</span> I am web designer and developer,life long learner,and ready for new opportunities.I love music,the arts,teach and all the things creative.
+
+            
+        </p>
+        <p>I am believe in user design and developing the best possible experiences.</p>
+    </div>
+        <h3 style="text-align:center;">My Skills</h3>
+         
+        <div class="skill">
+        <p>Html 5</p>
+        <div class="container">
+            <div class="skills html">90%</div>
+        </div>
+        <p>CSS 3</p>
+        <div class="container">
+            <div class="skills css">85%</div>
+        </div>
+        <p>jquery</p>
+        <div class="container">
+            <div class="skills php">60%</div>
+        </div>
+        <p>Java script</p>
+        <div class="container">
+            <div class="skills js">65%</div>
+        </div>
+    </div>
+    </section>
+    <section class="folio" id="folio" style="margin-right: 1%;padding-left: 3%;">
+        <h2 style="text-align:center;">Folio</h2>
+        <div class="row-halves">
+            <div class="col">
+                <img src="n4.jpg" alt="" height="350px" width="80px">
+                <h3>GROUP PHOTO WITH MY FRIENDS IN MARUTHAMALAI MURUGAN TEMPLE</h3>
+                <p></p>
+            </div>
+        
+        <div class="col">
+            <img src="n1.jpg" alt="" height="350px" width="80px">
+            <h3>DHANUSHKARTHI</h3>
+            <p></p>
+        </div>
+        </div> 
+        
+        <div class="row-halves">
+            <div class="col">
+                <img src="n2.jpg" alt="" height="350px" width="80px ">
+                <h3>DHANUSH AND GAJENDHIRAN</h3>
+                <p> </p>
+            </div>
+        
+        <div class="col">
+            <img src="n3.jpg" alt="" height="350px" width="100px">
+            <h3>AFTER THE LONG DAY GO AND MEET THE MY FRIENDS</h3>
+            <p></p>
+        </div>
+        </div> 
+    </section>
+    <section class="contact" id="contact">
+        <h2 style="text-align:center;">contact</h2>
+        <div class="contain">
+            <form action="" style="margin-right: 1% !important;padding-left: 3%;">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+                <label for="email">E-mail</label>
+                <input type="text" id="email" name="email">
+                <label for="Message">Message</label>
+                <textarea name="message" id="message" style="height:200px"></textarea>
+                <input type="submit" value="message">
+            </form>
+        </div>
+
+
+    </section>
+    <footer>
+        <section class="top-bar">
+            <div class="mmm">
+                <h1>FOLLOW ME</h1>
+            
+            <a href="https://www.facebook.com/campaign/landing.php?campaign_id=1653993517&extra_1=s%7Cc%7C318504236057%7Ce%7Cfacebook%20%27%7C&placement=&creative=318504236057&keyword=facebook%20%27&partner_id=googlesem&extra_2=campaignid%3D1653993517%26adgroupid%3D63066387003%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D1t1%26target%3D%26targetid%3Dkwd-360705453827%26loc_physical_ms%3D9050514%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQiA6IHwBRCJARIsALNjViXa-vVg57VVCPxuaf8sTvVFqfSh7iinkqZZDMV6C6P30mRJfWiwr54aArndEALw_wcB"><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-github"></i></a>
+             <a href=""><i class="fab fa-youtube"></i></a>
+             <a href="https://www.instagram.com/it_s_me_naveen007/"><i class="fab fa-instagram"></i></a>
+             <a href=""><i class="fab fa-whatsapp"></i></a>
+             <h2>naveenkumar0072001@gmail.com</h2> 
+            </div>
+        </section>
+        
+
+    </footer>
+</body>
+</html>
